@@ -1,70 +1,233 @@
-# Getting Started with Create React App
+# TutorTutee — Tutoring Marketplace
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React-based tutoring marketplace designed to connect learners with tutors through a simple, accessible platform. TutorTutee provides user authentication, tutor discovery, profile management, and a dedicated interface for learners and tutors.
 
-## Available Scripts
+**Frontend:** React  
+**Backend:** Spring Boot REST API  
+**Status:** Developed and tested locally
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Table of Contents
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- [Overview](#overview)
+- [Screenshots](#screenshots)
+- [Features](#features)
+- [Technology Stack](#technology-stack)
+- [Application Flow](#application-flow)
+- [Getting Started](#getting-started)
+- [Backend Integration](#backend-integration)
+- [Project Structure](#project-structure)
+- [Future Improvements](#future-improvements)
+- [Author](#author)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## Overview
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+TutorTutee aims to make it easier for learners to find tutors and for tutors to present their teaching profiles.
 
-### `npm run build`
+This repository contains the frontend application, built with React, that communicates with the TutorTutee backend through REST APIs.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Backend repository:** [TutorTutee Backend](https://github.com/Celenkosini/tutor-tuteee)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Screenshots
 
-### `npm run eject`
+The following screenshots demonstrate the user interface and key functionality of TutorTutee.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 1. Landing Page
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<!-- Add landing page screenshot here -->
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+![TutorTutee Landing Page](screenshots/landing-page.png)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+*Description: The main entry point to the TutorTutee platform.*
 
-## Learn More
+### 2. User Registration
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<!-- Add registration screenshot here -->
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![Registration Page](screenshots/register.png)
 
-### Code Splitting
+*Description: Registration interface for learners and tutors.*
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### 3. User Login
 
-### Analyzing the Bundle Size
+<!-- Add login screenshot here -->
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+![Login Page](screenshots/login.png)
 
-### Making a Progressive Web App
+*Description: Authentication interface for registered users.*
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### 4. Tutor Profile Setup
 
-### Advanced Configuration
+<!-- Add tutor profile setup screenshot here -->
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+![Tutor Profile Setup](screenshots/tutor-profile-setup.png)
 
-### Deployment
+*Description: Interface for tutors to provide their biography, subjects, hourly rate, location, profile image, and availability.*
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### 5. Tutor Discovery
 
-### `npm run build` fails to minify
+<!-- Add tutor listing/search screenshot here -->
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![Tutor Discovery](screenshots/tutors.png)
+
+*Description: Interface for learners to discover and explore tutor profiles.*
+
+### 6. Tutor Profile
+
+<!-- Add individual tutor profile screenshot here -->
+
+![Tutor Profile](screenshots/tutor-profile.png)
+
+*Description: Displays a tutor's profile and available information.*
+
+### 7. Dashboard
+
+<!-- Add dashboard screenshot here -->
+
+![User Dashboard](screenshots/dashboard.png)
+
+*Description: The dashboard available to authenticated users.*
+
+---
+
+## Features
+
+- User registration and login
+- Tutor and learner account roles
+- Authenticated navigation and protected routes
+- First-time tutor profile setup
+- Tutor profile viewing and discovery
+- Frontend integration with REST APIs
+- Responsive user interface
+
+---
+
+## Technology Stack
+
+| Technology | Purpose |
+|---|---|
+| React | Frontend user interface |
+| JavaScript | Application logic |
+| React Router | Client-side navigation |
+| Axios | HTTP requests to the backend |
+| Bootstrap | Styling and responsive layouts |
+| CSS | Custom interface styling |
+
+---
+
+## Application Flow
+
+1. A new user registers as a tutor or learner.
+2. The user logs in with their email and password.
+3. Tutors without an existing profile are directed to complete their profile.
+4. Tutors with an existing profile can proceed to the dashboard.
+5. Learners can access the available tutor discovery functionality.
+6. The frontend communicates with the backend to perform supported operations.
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js
+- npm
+- A running TutorTutee backend
+
+### Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/Celenkosini/tutor-tutee.git
+cd tutor-tutee
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+### Configuration
+
+Configure the frontend API base URL to point to the running backend using the configuration already implemented in the project.
+
+### Run the application
+
+```bash
+npm start
+```
+
+The development server normally runs at:
+
+`http://localhost:3000`
+
+### Build for production
+
+```bash
+npm run build
+```
+
+---
+
+## Backend Integration
+
+The frontend integrates with the TutorTutee Spring Boot backend.
+
+**Backend repository:** [github.com/Celenkosini/tutor-tuteee](https://github.com/Celenkosini/tutor-tuteee)
+
+The backend provides the API functionality for authentication, tutor profiles, and other supported application operations.
+
+---
+
+## Project Structure
+
+```text
+src/
+├── context/
+│   └── AuthContext.jsx
+├── pages/
+│   ├── Landing.jsx
+│   ├── Login.jsx
+│   ├── Register.jsx
+│   ├── Dashboard.jsx
+│   ├── Tutor/
+│   │   └── Tutors.jsx
+│   └── nav/
+│       └── NavBar.jsx
+├── App.jsx
+└── index.js
+
+public/
+package.json
+README.md
+```
+
+*Adjust this structure to match the actual files and folders in your repository.*
+
+---
+
+## Future Improvements
+
+- Enhanced tutor search and filtering
+- Improved profile image handling
+- Additional user experience improvements
+- Further responsive design refinements
+
+---
+
+## Author
+
+**Celenkosini Nyawo**
+
+GitHub: [@Celenkosini](https://github.com/Celenkosini)
+
+---
+
+*TutorTutee — Connecting learners with tutors through technology.*
